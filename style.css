@@ -1,0 +1,32 @@
+form input{
+    background: transparent;
+	border: none;
+	border-bottom: 1px dashed #83A4C5;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+	
+}
+
+.qBold{
+	font-weight: 600;
+	margin-right: 5px;
+	font-family: Arial, Helvetica, sans-serif;
+	
+}
+
+.line01{
+	padding-bottom: 15px;
+}
+
+.heading{
+	text-align: center;
+	font-size: 20px;
+	background-color: #b8d6f4;
+	border: 2px solid black;
+	padding: 8px;
+	font-family: Arial, Helvetica, sans-serif;
+
+}
+
+  
