@@ -7,9 +7,9 @@
     <title>Job Form</title>
 </head>
 <body>
-    <div>
+    <div style="width: 80%; margin: auto;">
         <div>
-            <h1 style="text-align: center;">EMPLOYMENT / JOB APPLICATION</h1>
+            <h1 style="text-align: center;padding-top: 2rem;">EMPLOYMENT / JOB APPLICATION</h1>
             <h5 class="heading">PERSONAL INFORMATION</h5>
         </div>
         <div>
@@ -29,8 +29,9 @@
               </div>
                
                 <div class="line01">
-                    <span class="qBold">E-MAIL:</span><input required type="text" name="" id="">
-                <span class="qBold">PHONE:</span><input type="text" required>
+                    <span class="qBold">E-MAIL:</span><input required type="email" name="" id="">
+                <span class="qBold">PHONE:</span><input type="tel" id="phone_number" required>
+               
                 </div>
             
                 <div class="line01">
@@ -101,45 +102,49 @@
                </div>
                
 
-                <div class="line01">
-                    <span class="qBold">HAVE YOU EVER WORKED FOR THE EMPLOYED?</span>
-                    <input type="radio" name="radio">
-                    <label class="container">YES
-                        <span class="checkmark"></span>
-                      </label>
-                      <input type="radio" name="radio">
-                      <label class="container">NO
-                        <span class="checkmark"></span>
-                      </label>
-                </div>
+               <div class="line01">
+                <span class="qBold" id="validation01">HAVE YOU EVER WORKED FOR THE EMPLOYED?</span>
+                <label>
+                  <input type="radio" name="yesno" value="yes" id="yesRadio"> YES
+                </label>
+                <label>
+                  <input type="radio" name="yesno" value="no" id="noRadio"> NO
+                </label>
+                <br>
+                
+            </div>
+            
+            <div class="line01">
+                <span id="datesInput" class="qBold">"IF YES, WRITE THE START AND END DATES:</span> 
+                <input id="myInput" type="text" >
+            </div>
                 
 
-                <div class="line01">
-                    <span class="qBold">"IF YES, WRITE THE START AND END DATES:</span> 
-                <input type="text">
-                </div>
-                
-
-
+<!-- input 02 -->
 
                 <div class="line01">
                     <span class="qBold">HAVE YOU EVER BEEN CONVICTED OF A FELONY?</span>
-                    <input type="radio" name="radio">
-                    <label class="container">YES
-                        <span class="checkmark"></span>
-                      </label>
-                      <input type="radio" name="radio">
-                      <label class="container">NO
-                        <span class="checkmark"></span>
-                      </label>
+                    <label>
+                      <input type="radio" name="yesno2" value="yes" id="yesRadio2"> YES
+                    </label>
+                    <label>
+                      <input type="radio" name="yesno2" value="no" id="noRadio2"> NO
+                    </label>
                 </div>
                 
 
                 <div class="line01">
-                    <span class="qBold">"IF YES, PLEASE EXPLALIN:</span> 
-                <input  type="text">
+                    <span id="datesInput2" class="qBold">"IF YES, PLEASE EXPLALIN:</span> 
+                <input id="myInput2" type="text">
                 </div>
               
+
+
+
+
+
+
+
 
               <h5 class="heading">EDUCATION</h5>
                 <br>
@@ -161,7 +166,7 @@
                 </div>
 
                <div class="line01">
-                <span>GRADUATED?</span>
+                <span style="font-weight: 600;">GRADUATED?</span>
                 <input type="radio" name="radio">
                 <label class="container">YES
                     <span class="checkmark"></span>
@@ -170,7 +175,7 @@
                   <label class="container">NO. 
                     <span class="checkmark"></span>
                   </label>
-                <span> DIPLOMA:</span>
+                <span style="font-weight: 600;"> DIPLOMA:</span>
                 <input required type="text">
                
 
@@ -192,8 +197,8 @@
                 </div>
                
 
-                <div class="line01">
-                    <span>GRADUATED?</span>
+                <div style="padding-bottom: 2rem;" class="line01">
+                    <span style="font-weight: 600;">GRADUATED?</span>
                     <input type="radio" name="radio">
                     <label class="container">YES
                         <span class="checkmark"></span>
@@ -202,16 +207,10 @@
                       <label class="container">NO.
                         <span class="checkmark"></span>
                       </label>
-                <span>DEGREE:</span>
+                <span style="font-weight: 600;">DEGREE:</span>
                 <input required type="text">
                 
                 </div>
-
-
-
-
-
-
 
 
                 </form>

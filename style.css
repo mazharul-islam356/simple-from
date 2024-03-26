@@ -8,6 +8,27 @@ form input{
 	
 }
 
+.phone-number {
+	text-indent: 1ch; /* Move text left by one character width */
+	position: relative;
+  }
+  
+  .phone-number:before {
+	content: attr(data-phone); /* Use data attribute for number */
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 3ch; /* Adjust width for area code + hyphen */
+	overflow: hidden;
+  }
+  
+  .phone-number:after {
+	content: "- "; /* Add hyphen after area code */
+	position: absolute;
+	left: 3ch;
+  }
+  
+
 .qBold{
 	font-weight: 600;
 	margin-right: 5px;
