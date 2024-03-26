@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/demo.css">
+    <link rel="stylesheet" href="css/intlTelInput.css">
     <title>Job Form</title>
 </head>
 <body>
@@ -23,12 +25,12 @@
 
              
               <div class="line01">
-                <span class="qBold">ADDRESS:</span><input required type="text" placeholder="Street address"><input type="text" placeholder="City"><input type="text" placeholder="Zip code">
+                <span class="qBold">ADDRESS:</span><input required type="text"  placeholder="Street address"><input type="text" placeholder="City"><input type="text" placeholder="Zip code">
               </div>
                
                 <div class="line01">
                     <span class="qBold">E-MAIL:</span><input required type="email" name="" id="">
-                <span class="qBold">PHONE:</span><input type="number" id="phone_number" required>
+                <span class="qBold">PHONE:</span><input type="tel" placeholder="Enter Your Number" id="phone" onkeypress="return restrictAlphabets(event)" minlength="11" maxlength="11" required>
                
                 </div>
             
@@ -141,8 +143,12 @@
 
                <div class="line01">
                 <span class="qBold">HIGH SCHOLL:</span>
-                <input required type="text">
-                <span>CITY/STATE:</span>
+                <select name="college" id="college">
+                  <option value="volvo">High Scholl 01</option>
+                  <option value="saab">High Scholl 02</option>
+                  <option value="opel">High Scholl 03</option>   
+                </select>
+                <span style="margin-left: 20px;">CITY/STATE:</span>
                 <input required type="text">
                </div>
                 
@@ -165,7 +171,7 @@
                   <label class="container">NO. 
                     <span class="checkmark"></span>
                   </label>
-                <span style="font-weight: 600;"> DIPLOMA:</span>
+                <span style="font-weight: 600; margin-left: 20px;"> DIPLOMA:</span>
                 <input required type="text">
                
 
@@ -173,8 +179,13 @@
                 
                <div class="line01">
                 <span class="qBold">COLLEGE:</span>
-                <input required type="text">
-                <span>CITY/STATE:</span>
+                <select name="college" id="college">
+                  <option value="volvo">College 01</option>
+                  <option value="saab">College 02</option>
+                  <option value="opel">College 03</option>
+                 
+                </select>
+                <span style="margin-left: 20px;">CITY/STATE:</span>
                 <input required type="text">
                 
                </div>
@@ -197,7 +208,7 @@
                       <label class="container">NO.
                         <span class="checkmark"></span>
                       </label>
-                <span style="font-weight: 600;">DEGREE:</span>
+                <span style="font-weight: 600; margin-left: 20px;">DEGREE:</span>
                 <input required type="text">
                 
                 </div>
@@ -208,5 +219,22 @@
     </div>
 
     <script src="index.js"></script>
+    <script src="js/intlTelInput.js"></script>
+    <script>
+      var input = document.querySelector('#phone');
+      window.intlTelInput(input,{});
+    </script>
+
+<script>
+  function restrictAlphabets(e){
+var x = e.which || e.keycode;
+if((x >= 48 && x <= 57))
+return true;
+else
+return false;
+  }
+  </script>
+
+
 </body>
 </html>
